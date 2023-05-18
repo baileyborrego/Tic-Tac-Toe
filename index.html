@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Tic-Tac-Toe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+  <form autocomplete="off">
+    <label for="xName">Player X</label>
+    <input type="text" id="xName" name="xName" placeholder="Player X's Name Here">
+    <label for="oName">Player O</label>
+    <input type="text" id="oName" name="oName" placeholder="Player O's Name Here">
+  </form>
+  <h1>Tic-Tac-Toe</h1>
+  <div id="winningDiv"></div>
+  <h2 id="thisPlayersTurn">Player X BEGIN!</h2>
+    <div id="board">
+        <div class="cell" id="0"><span></span></div>
+        <div class="cell" id="1"><span></span></div>
+        <div class="cell" id="2"><span></span></div>
+        <div class="cell" id="3"><span></span></div>
+        <div class="cell" id="4"><span></span></div>
+        <div class="cell" id="5"><span></span></div>
+        <div class="cell" id="6"><span></span></div>
+        <div class="cell" id="7"><span></span></div>
+        <div class="cell" id="8"><span></span></div>
+    </div>
+      <h2 class="instructions">Instructions</h2>
+      <p>Player will select an empty cell by clicking in it</p>
+      <p>Players will then alternate turns</p>
+      <p>Get 3 in a row and you win!</p>
+      <div>
+        <button id="newGame"> NEW GAME </button>
+      </div>
+    <script src="Tic-Tac-Toe.js"></script>
+
+</body>
+
+</html>

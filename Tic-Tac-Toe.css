@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+    font-family: 'VT323', monospace;
+}
+
+h1, h2{
+    color:rgb(179, 42, 243);
+}
+
+.instructions, p{
+    color: rgb(107, 231, 250);
+}
+
+form{
+    display: flex;
+    width: 600px;
+    justify-self: center;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+input{
+    background-color: rgba(0, 0, 0, 0.449);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    height: 30px;
+}
+
+input:hover{
+    background-color: black;
+}
+
+#xName{
+    color: rgb(198, 88, 249);
+    border:2px solid rgb(198, 88, 249);
+}
+
+#oName{
+    color: rgb(107, 231, 250);
+    border:2px solid rgb(107, 231, 250);
+}
+
+label{
+    color: rgb(57, 246, 76);
+    font-size: 20px;
+    /* flex-grow: 1; */
+}
+
+#board{
+    display: flex;
+    flex-wrap:wrap;
+    height: 600px;
+    width:600px;
+    background-color: rgba(0, 0, 0, 0.747);
+}
+
+.cell{
+    display: flex;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell:hover {
+    background-color: black;
+}
+
+body{
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image:url(synthwave.jpeg);
+    background-repeat:repeat-y;
+    background-size:cover;
+}
+
+.cell:nth-child(3n+2){
+    border-right: 5px solid rgb(179, 42, 243);
+    border-left: 5px solid rgb(179, 42, 243);
+}
+
+.cell:nth-child(n+4):nth-child(-n+6){
+    border-bottom: 5px solid rgb(179, 42, 243);
+    border-top: 5px solid rgb(179, 42, 243);
+}
+
+.playerO{
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+    border: 15px solid rgb(107, 231, 250);
+}
+
+.playerX{
+    height: 120px;
+    width: 120px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.playerX:before, .playerX:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(198, 88, 249);
+}
+
+.playerX:before {
+    left: 55%; 
+    width: 20%; 
+    margin-left: -15%;
+    height: 100%;
+}
+
+.playerX:after{
+    top: 55%; 
+    height: 20%; 
+    margin-top: -15%;
+    width: 100%;
+}
+
+.winningMessageText{
+    text-align: center;
+    color:rgb(127, 247, 67);
+    font-size: 35px;
+}
+
+button{
+    border-radius: 10%;
+    border: 1px solid black;
+    box-shadow: 0.3em 0.3em 2em rgb(127, 247, 67);
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgb(214, 212, 212);
+    padding-left: 2px;
+    padding-top: 4px;
+    padding-right: 2px;
+    padding-bottom: 4px;
+}
