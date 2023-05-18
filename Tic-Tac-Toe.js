@@ -74,7 +74,7 @@ function validateScore(){
       document.getElementById("thisPlayersTurn").innerHTML = "Player X WINS!";
       // create a new div inside html<div id="winningMessage"> 
       const winningMessageDiv = document.getElementById("winningDiv");
-      const winnerMessageP = document.createElement("p");
+      let winnerMessageP = document.createElement("p");
       const newGameP = document.createElement("p");
       // add class of .winningMessageText so it will display styling from your css
       winnerMessageP.classList.add("winningMessageText");
@@ -133,18 +133,19 @@ function tieBreaker(){
 }
 
 function newGame(){
-  let playerMadeDivs = document.querySelectorAll("div.playerX, div.playerO");
   document.getElementById("thisPlayersTurn").innerHTML = "Player X BEGIN!";
-  console.log(playerMadeDivs);
   const winningMessageDiv = document.getElementById("winningDiv");
-  const winnerMessageP = document.getElementsByClassName("winningMessageText");
-  winningMessageDiv.remove(winnerMessageP);
-  for (let i = 0; i < cells.length; i++) {
-    cells[i].innerHTML= '';
+  let winnerMessageP = document.getElementsByClassName("winningMessageText");
+  if (winnerMessageP){
+    winningMessageDiv.innerHTML = '';
+    for (let i = 0; i < cells.length; i++) {
+      cells[i].innerHTML= '';
+      playerXGuess = [];
+      playerOGuess = [];
+      eventListener();
+      currentPlayer = "playerX";
+    }
+
   }
-  playerXGuess = [];
-  playerOGuess = [];
-  eventListener();
-  board.style.backgroundColor = "rgba(0, 0, 0, 0.747)";
-  currentPlayer = "playerX";
+ 
 }
